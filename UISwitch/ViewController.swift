@@ -10,11 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var labelQues: UILabel!
+    
+    
+    @IBOutlet weak var labelAnswer: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
 
 
+    @IBAction func switchAction(_ sender: UISwitch) {
+        
+        if sender.isOn == true{
+            
+            labelAnswer.text = "YES ,i'm iOS developer"
+        }else {
+            
+            labelAnswer.text = "NO ,i'm not iOS developer"
+        }
+        
+    }
 }
 
